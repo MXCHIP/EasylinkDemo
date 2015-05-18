@@ -7,8 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EASYLINK.h"
 
-@interface ViewController : UIViewController
+
+@interface ViewController : UIViewController{
+    EASYLINK *easylink_config;
+    UIAlertView *alert;
+}
+
+
+
+- (IBAction) easyLinkButtonPressed: (UIButton *) button;
 
 
 @end
