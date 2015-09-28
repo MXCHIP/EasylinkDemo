@@ -7,18 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D3984CC1B00C1A5002C597A /* EasyLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3984CB1B00C1A5002C597A /* EasyLink.m */; };
-		3DFED67C1AFCCFC50089FC07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFED67B1AFCCFC50089FC07 /* main.m */; };
-		3DFED67F1AFCCFC50089FC07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFED67E1AFCCFC50089FC07 /* AppDelegate.m */; };
-		3DFED6821AFCCFC50089FC07 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFED6811AFCCFC50089FC07 /* ViewController.m */; };
-		3DFED6851AFCCFC50089FC07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFED6831AFCCFC50089FC07 /* Main.storyboard */; };
-		3DFED6871AFCCFC50089FC07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DFED6861AFCCFC50089FC07 /* Images.xcassets */; };
-		3DFED68A1AFCCFC50089FC07 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DFED6881AFCCFC50089FC07 /* LaunchScreen.xib */; };
-		3DFED6961AFCCFC50089FC07 /* Easlink_send_demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFED6951AFCCFC50089FC07 /* Easlink_send_demoTests.m */; };
-		3DFED6B01AFCD2AD0089FC07 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFED6AD1AFCD2AD0089FC07 /* Reachability.m */; };
-		3DFED6C21AFCD44F0089FC07 /* CocoaAsyncSocket-7.3.3.zip in Resources */ = {isa = PBXBuildFile; fileRef = 3DFED6BC1AFCD44F0089FC07 /* CocoaAsyncSocket-7.3.3.zip */; };
-		3DFED6C31AFCD44F0089FC07 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFED6BF1AFCD44F0089FC07 /* AsyncSocket.m */; };
-		3DFED6C41AFCD44F0089FC07 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFED6C11AFCD44F0089FC07 /* AsyncUdpSocket.m */; };
+		3D769FF61BB932D700F26005 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D769FF21BB932D700F26005 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		3D769FF71BB932D700F26005 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D769FF31BB932D700F26005 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
+		3D769FF81BB932D700F26005 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D769FF51BB932D700F26005 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3D769FFE1BB93B0200F26005 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D769FFC1BB93B0200F26005 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
+		3D769FFF1BB93B0200F26005 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D769FFD1BB93B0200F26005 /* main.m */; settings = {ASSET_TAGS = (); }; };
+		3D76A0091BB93BDF00F26005 /* libEasyLink_Debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D76A0071BB93BDF00F26005 /* libEasyLink_Debug.a */; settings = {ASSET_TAGS = (); }; };
+		3D76A00C1BB93BF500F26005 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D76A00B1BB93BF500F26005 /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
+		3D76A0111BB93C2400F26005 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D76A00E1BB93C2400F26005 /* AsyncSocket.m */; settings = {ASSET_TAGS = (); }; };
+		3D76A0121BB93C2400F26005 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D76A0101BB93C2400F26005 /* AsyncUdpSocket.m */; settings = {ASSET_TAGS = (); }; };
+		3D76A0161BB93DC200F26005 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D76A0141BB93DC200F26005 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		3D76A0191BB93EB200F26005 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D76A0171BB93EB200F26005 /* LaunchScreen.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,30 +31,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D3984CB1B00C1A5002C597A /* EasyLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyLink.m; sourceTree = "<group>"; };
-		3DFED6761AFCCFC50089FC07 /* Easlink send demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easlink send demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DFED67A1AFCCFC50089FC07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DFED67B1AFCCFC50089FC07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3DFED67D1AFCCFC50089FC07 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3DFED67E1AFCCFC50089FC07 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3DFED6801AFCCFC50089FC07 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3DFED6811AFCCFC50089FC07 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3DFED6841AFCCFC50089FC07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3DFED6861AFCCFC50089FC07 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3DFED6891AFCCFC50089FC07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		3DFED68F1AFCCFC50089FC07 /* Easlink send demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Easlink send demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D769FF11BB932D700F26005 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EasylinkDemo/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		3D769FF21BB932D700F26005 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = EasylinkDemo/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		3D769FF31BB932D700F26005 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = EasylinkDemo/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		3D769FF41BB932D700F26005 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = EasylinkDemo/ViewController.h; sourceTree = SOURCE_ROOT; };
+		3D769FF51BB932D700F26005 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = EasylinkDemo/ViewController.m; sourceTree = SOURCE_ROOT; };
+		3D769FFC1BB93B0200F26005 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = EasylinkDemo/Info.plist; sourceTree = SOURCE_ROOT; };
+		3D769FFD1BB93B0200F26005 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EasylinkDemo/main.m; sourceTree = SOURCE_ROOT; };
+		3D76A0071BB93BDF00F26005 /* libEasyLink_Debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEasyLink_Debug.a; path = EasylinkDemo/EasyLink/libEasyLink_Debug.a; sourceTree = SOURCE_ROOT; };
+		3D76A0081BB93BDF00F26005 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = route.h; path = EasylinkDemo/EasyLink/route.h; sourceTree = SOURCE_ROOT; };
+		3D76A00A1BB93BF500F26005 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = EasylinkDemo/EasyLink/Reachability/Reachability.h; sourceTree = SOURCE_ROOT; };
+		3D76A00B1BB93BF500F26005 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = EasylinkDemo/EasyLink/Reachability/Reachability.m; sourceTree = SOURCE_ROOT; };
+		3D76A00D1BB93C2400F26005 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = "EasylinkDemo/EasyLink/CocoaAsyncSocket-7.3.3/RunLoop/AsyncSocket.h"; sourceTree = SOURCE_ROOT; };
+		3D76A00E1BB93C2400F26005 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = "EasylinkDemo/EasyLink/CocoaAsyncSocket-7.3.3/RunLoop/AsyncSocket.m"; sourceTree = SOURCE_ROOT; };
+		3D76A00F1BB93C2400F26005 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncUdpSocket.h; path = "EasylinkDemo/EasyLink/CocoaAsyncSocket-7.3.3/RunLoop/AsyncUdpSocket.h"; sourceTree = SOURCE_ROOT; };
+		3D76A0101BB93C2400F26005 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncUdpSocket.m; path = "EasylinkDemo/EasyLink/CocoaAsyncSocket-7.3.3/RunLoop/AsyncUdpSocket.m"; sourceTree = SOURCE_ROOT; };
+		3D76A0131BB93CF500F26005 /* EasyLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasyLink.h; path = EasylinkDemo/EasyLink/EasyLink.h; sourceTree = SOURCE_ROOT; };
+		3D76A0151BB93DC200F26005 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = EasylinkDemo/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D76A0181BB93EB200F26005 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = EasylinkDemo/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3DFED6761AFCCFC50089FC07 /* EasylinkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasylinkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DFED68F1AFCCFC50089FC07 /* EasyLinkDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyLinkDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFED6941AFCCFC50089FC07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DFED6951AFCCFC50089FC07 /* Easlink_send_demoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Easlink_send_demoTests.m; sourceTree = "<group>"; };
-		3DFED6A61AFCD2AD0089FC07 /* EASYLINK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EASYLINK.h; sourceTree = "<group>"; };
-		3DFED6A71AFCD2AD0089FC07 /* EMWHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMWHeader.h; sourceTree = "<group>"; };
-		3DFED6AA1AFCD2AD0089FC07 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
-		3DFED6AC1AFCD2AD0089FC07 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		3DFED6AD1AFCD2AD0089FC07 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		3DFED6BC1AFCD44F0089FC07 /* CocoaAsyncSocket-7.3.3.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "CocoaAsyncSocket-7.3.3.zip"; sourceTree = "<group>"; };
-		3DFED6BE1AFCD44F0089FC07 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
-		3DFED6BF1AFCD44F0089FC07 /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
-		3DFED6C01AFCD44F0089FC07 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
-		3DFED6C11AFCD44F0089FC07 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D76A0091BB93BDF00F26005 /* libEasyLink_Debug.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,8 +76,10 @@
 		3DFED66D1AFCCFC50089FC07 = {
 			isa = PBXGroup;
 			children = (
-				3DFED6781AFCCFC50089FC07 /* Easlink send demo */,
-				3DFED6921AFCCFC50089FC07 /* Easlink send demoTests */,
+				3D76A0171BB93EB200F26005 /* LaunchScreen.xib */,
+				3D76A0141BB93DC200F26005 /* Main.storyboard */,
+				3DFED6781AFCCFC50089FC07 /* Easylink Demo */,
+				3DFED6921AFCCFC50089FC07 /* Easylink DemoTests */,
 				3DFED6771AFCCFC50089FC07 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,45 +87,42 @@
 		3DFED6771AFCCFC50089FC07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3DFED6761AFCCFC50089FC07 /* Easlink send demo.app */,
-				3DFED68F1AFCCFC50089FC07 /* Easlink send demoTests.xctest */,
+				3DFED6761AFCCFC50089FC07 /* EasylinkDemo.app */,
+				3DFED68F1AFCCFC50089FC07 /* EasyLinkDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3DFED6781AFCCFC50089FC07 /* Easlink send demo */ = {
+		3DFED6781AFCCFC50089FC07 /* Easylink Demo */ = {
 			isa = PBXGroup;
 			children = (
-				3DFED6BB1AFCD44F0089FC07 /* CocoaAsyncSocket-7.3.3 */,
-				3DFED6A51AFCD2AD0089FC07 /* Common */,
-				3DFED6AB1AFCD2AD0089FC07 /* Reachability */,
-				3DFED67D1AFCCFC50089FC07 /* AppDelegate.h */,
-				3DFED67E1AFCCFC50089FC07 /* AppDelegate.m */,
-				3DFED6801AFCCFC50089FC07 /* ViewController.h */,
-				3DFED6811AFCCFC50089FC07 /* ViewController.m */,
-				3DFED6831AFCCFC50089FC07 /* Main.storyboard */,
-				3DFED6861AFCCFC50089FC07 /* Images.xcassets */,
-				3DFED6881AFCCFC50089FC07 /* LaunchScreen.xib */,
+				3D769FF11BB932D700F26005 /* AppDelegate.h */,
+				3D769FF21BB932D700F26005 /* AppDelegate.m */,
+				3D769FF41BB932D700F26005 /* ViewController.h */,
+				3D769FF51BB932D700F26005 /* ViewController.m */,
+				3DFED6A51AFCD2AD0089FC07 /* EasyLink */,
+				3D769FF31BB932D700F26005 /* Images.xcassets */,
 				3DFED6791AFCCFC50089FC07 /* Supporting Files */,
 			);
+			name = "Easylink Demo";
 			path = "Easlink send demo";
 			sourceTree = "<group>";
 		};
 		3DFED6791AFCCFC50089FC07 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3DFED67A1AFCCFC50089FC07 /* Info.plist */,
-				3DFED67B1AFCCFC50089FC07 /* main.m */,
+				3D769FFC1BB93B0200F26005 /* Info.plist */,
+				3D769FFD1BB93B0200F26005 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3DFED6921AFCCFC50089FC07 /* Easlink send demoTests */ = {
+		3DFED6921AFCCFC50089FC07 /* Easylink DemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				3DFED6951AFCCFC50089FC07 /* Easlink_send_demoTests.m */,
 				3DFED6931AFCCFC50089FC07 /* Supporting Files */,
 			);
+			name = "Easylink DemoTests";
 			path = "Easlink send demoTests";
 			sourceTree = "<group>";
 		};
@@ -138,44 +134,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3DFED6A51AFCD2AD0089FC07 /* Common */ = {
+		3DFED6A51AFCD2AD0089FC07 /* EasyLink */ = {
 			isa = PBXGroup;
 			children = (
-				3D3984CB1B00C1A5002C597A /* EasyLink.m */,
-				3DFED6A61AFCD2AD0089FC07 /* EASYLINK.h */,
-				3DFED6A71AFCD2AD0089FC07 /* EMWHeader.h */,
-				3DFED6AA1AFCD2AD0089FC07 /* route.h */,
+				3DFED6AB1AFCD2AD0089FC07 /* Reachability */,
+				3DFED6BB1AFCD44F0089FC07 /* CocoaAsyncSocket-7.3.3 */,
+				3D76A0071BB93BDF00F26005 /* libEasyLink_Debug.a */,
+				3D76A0131BB93CF500F26005 /* EasyLink.h */,
+				3D76A0081BB93BDF00F26005 /* route.h */,
 			);
-			name = Common;
+			name = EasyLink;
 			path = EasyLink/EasyLink/Common;
 			sourceTree = "<group>";
 		};
 		3DFED6AB1AFCD2AD0089FC07 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
-				3DFED6AC1AFCD2AD0089FC07 /* Reachability.h */,
-				3DFED6AD1AFCD2AD0089FC07 /* Reachability.m */,
+				3D76A00A1BB93BF500F26005 /* Reachability.h */,
+				3D76A00B1BB93BF500F26005 /* Reachability.m */,
 			);
 			name = Reachability;
-			path = EasyLink/EasyLink/Reachability;
+			path = ../Reachability;
 			sourceTree = "<group>";
 		};
 		3DFED6BB1AFCD44F0089FC07 /* CocoaAsyncSocket-7.3.3 */ = {
 			isa = PBXGroup;
 			children = (
-				3DFED6BC1AFCD44F0089FC07 /* CocoaAsyncSocket-7.3.3.zip */,
 				3DFED6BD1AFCD44F0089FC07 /* RunLoop */,
 			);
-			path = "CocoaAsyncSocket-7.3.3";
+			name = "CocoaAsyncSocket-7.3.3";
+			path = "../../../CocoaAsyncSocket-7.3.3";
 			sourceTree = "<group>";
 		};
 		3DFED6BD1AFCD44F0089FC07 /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
-				3DFED6BE1AFCD44F0089FC07 /* AsyncSocket.h */,
-				3DFED6BF1AFCD44F0089FC07 /* AsyncSocket.m */,
-				3DFED6C01AFCD44F0089FC07 /* AsyncUdpSocket.h */,
-				3DFED6C11AFCD44F0089FC07 /* AsyncUdpSocket.m */,
+				3D76A00D1BB93C2400F26005 /* AsyncSocket.h */,
+				3D76A00E1BB93C2400F26005 /* AsyncSocket.m */,
+				3D76A00F1BB93C2400F26005 /* AsyncUdpSocket.h */,
+				3D76A0101BB93C2400F26005 /* AsyncUdpSocket.m */,
 			);
 			path = RunLoop;
 			sourceTree = "<group>";
@@ -183,9 +180,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3DFED6751AFCCFC50089FC07 /* Easlink send demo */ = {
+		3DFED6751AFCCFC50089FC07 /* EasylinkDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3DFED6991AFCCFC50089FC07 /* Build configuration list for PBXNativeTarget "Easlink send demo" */;
+			buildConfigurationList = 3DFED6991AFCCFC50089FC07 /* Build configuration list for PBXNativeTarget "EasylinkDemo" */;
 			buildPhases = (
 				3DFED6721AFCCFC50089FC07 /* Sources */,
 				3DFED6731AFCCFC50089FC07 /* Frameworks */,
@@ -195,14 +192,14 @@
 			);
 			dependencies = (
 			);
-			name = "Easlink send demo";
+			name = EasylinkDemo;
 			productName = "Easlink send demo";
-			productReference = 3DFED6761AFCCFC50089FC07 /* Easlink send demo.app */;
+			productReference = 3DFED6761AFCCFC50089FC07 /* EasylinkDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3DFED68E1AFCCFC50089FC07 /* Easlink send demoTests */ = {
+		3DFED68E1AFCCFC50089FC07 /* EasyLinkDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3DFED69C1AFCCFC50089FC07 /* Build configuration list for PBXNativeTarget "Easlink send demoTests" */;
+			buildConfigurationList = 3DFED69C1AFCCFC50089FC07 /* Build configuration list for PBXNativeTarget "EasyLinkDemoTests" */;
 			buildPhases = (
 				3DFED68B1AFCCFC50089FC07 /* Sources */,
 				3DFED68C1AFCCFC50089FC07 /* Frameworks */,
@@ -213,9 +210,9 @@
 			dependencies = (
 				3DFED6911AFCCFC50089FC07 /* PBXTargetDependency */,
 			);
-			name = "Easlink send demoTests";
+			name = EasyLinkDemoTests;
 			productName = "Easlink send demoTests";
-			productReference = 3DFED68F1AFCCFC50089FC07 /* Easlink send demoTests.xctest */;
+			productReference = 3DFED68F1AFCCFC50089FC07 /* EasyLinkDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -237,7 +234,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3DFED6711AFCCFC50089FC07 /* Build configuration list for PBXProject "Easlink send demo" */;
+			buildConfigurationList = 3DFED6711AFCCFC50089FC07 /* Build configuration list for PBXProject "EasylinkDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -250,8 +247,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3DFED6751AFCCFC50089FC07 /* Easlink send demo */,
-				3DFED68E1AFCCFC50089FC07 /* Easlink send demoTests */,
+				3DFED6751AFCCFC50089FC07 /* EasylinkDemo */,
+				3DFED68E1AFCCFC50089FC07 /* EasyLinkDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -261,10 +258,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DFED6851AFCCFC50089FC07 /* Main.storyboard in Resources */,
-				3DFED6C21AFCD44F0089FC07 /* CocoaAsyncSocket-7.3.3.zip in Resources */,
-				3DFED68A1AFCCFC50089FC07 /* LaunchScreen.xib in Resources */,
-				3DFED6871AFCCFC50089FC07 /* Images.xcassets in Resources */,
+				3D76A0191BB93EB200F26005 /* LaunchScreen.xib in Resources */,
+				3D769FF71BB932D700F26005 /* Images.xcassets in Resources */,
+				3D769FFE1BB93B0200F26005 /* Info.plist in Resources */,
+				3D76A0161BB93DC200F26005 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,13 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DFED6821AFCCFC50089FC07 /* ViewController.m in Sources */,
-				3D3984CC1B00C1A5002C597A /* EasyLink.m in Sources */,
-				3DFED6C31AFCD44F0089FC07 /* AsyncSocket.m in Sources */,
-				3DFED67F1AFCCFC50089FC07 /* AppDelegate.m in Sources */,
-				3DFED6C41AFCD44F0089FC07 /* AsyncUdpSocket.m in Sources */,
-				3DFED67C1AFCCFC50089FC07 /* main.m in Sources */,
-				3DFED6B01AFCD2AD0089FC07 /* Reachability.m in Sources */,
+				3D769FF81BB932D700F26005 /* ViewController.m in Sources */,
+				3D76A0111BB93C2400F26005 /* AsyncSocket.m in Sources */,
+				3D769FF61BB932D700F26005 /* AppDelegate.m in Sources */,
+				3D76A0121BB93C2400F26005 /* AsyncUdpSocket.m in Sources */,
+				3D769FFF1BB93B0200F26005 /* main.m in Sources */,
+				3D76A00C1BB93BF500F26005 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +292,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DFED6961AFCCFC50089FC07 /* Easlink_send_demoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,24 +300,24 @@
 /* Begin PBXTargetDependency section */
 		3DFED6911AFCCFC50089FC07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3DFED6751AFCCFC50089FC07 /* Easlink send demo */;
+			target = 3DFED6751AFCCFC50089FC07 /* EasylinkDemo */;
 			targetProxy = 3DFED6901AFCCFC50089FC07 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3DFED6831AFCCFC50089FC07 /* Main.storyboard */ = {
+		3D76A0141BB93DC200F26005 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3DFED6841AFCCFC50089FC07 /* Base */,
+				3D76A0151BB93DC200F26005 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		3DFED6881AFCCFC50089FC07 /* LaunchScreen.xib */ = {
+		3D76A0171BB93EB200F26005 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3DFED6891AFCCFC50089FC07 /* Base */,
+				3D76A0181BB93EB200F26005 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -350,6 +345,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -366,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -394,6 +390,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -404,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -417,8 +414,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Easlink send demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = "$(SRCROOT)/EasylinkDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -431,7 +428,9 @@
 					"$(PROJECT_DIR)/Easlink",
 					send,
 					demo/EasyLink/EasyLink/Common,
+					"$(PROJECT_DIR)/EasylinkDemo/EasyLink",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mxchip.EasyLinkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -441,8 +440,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Easlink send demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				INFOPLIST_FILE = "$(SRCROOT)/EasylinkDemo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,7 +454,9 @@
 					"$(PROJECT_DIR)/Easlink",
 					send,
 					demo/EasyLink/EasyLink/Common,
+					"$(PROJECT_DIR)/EasylinkDemo/EasyLink",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mxchip.EasyLinkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -497,7 +498,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3DFED6711AFCCFC50089FC07 /* Build configuration list for PBXProject "Easlink send demo" */ = {
+		3DFED6711AFCCFC50089FC07 /* Build configuration list for PBXProject "EasylinkDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3DFED6971AFCCFC50089FC07 /* Debug */,
@@ -506,7 +507,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3DFED6991AFCCFC50089FC07 /* Build configuration list for PBXNativeTarget "Easlink send demo" */ = {
+		3DFED6991AFCCFC50089FC07 /* Build configuration list for PBXNativeTarget "EasylinkDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3DFED69A1AFCCFC50089FC07 /* Debug */,
@@ -515,7 +516,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3DFED69C1AFCCFC50089FC07 /* Build configuration list for PBXNativeTarget "Easlink send demoTests" */ = {
+		3DFED69C1AFCCFC50089FC07 /* Build configuration list for PBXNativeTarget "EasyLinkDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3DFED69D1AFCCFC50089FC07 /* Debug */,
