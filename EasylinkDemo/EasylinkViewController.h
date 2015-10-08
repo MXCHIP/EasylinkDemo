@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "EASYLINK.h"
+#import "Reachability.h"
 
 
-@interface ViewController : UIViewController{
+@interface EasylinkViewController : UIViewController<UITextFieldDelegate>{
+    Reachability *wifiReachability;
+    NSData *_ssidData;
     EASYLINK *easylink_config;
-    UIAlertView *alert;
+    IBOutlet UITextField *ssidField, *passwordField, *infoField;
+    IBOutlet UIButton *easylinkButton;
 }
 
 

@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D5134771BC63D7600906812 /* libEasyLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D5134761BC63D7600906812 /* libEasyLink.a */; settings = {ASSET_TAGS = (); }; };
 		3D769FF61BB932D700F26005 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D769FF21BB932D700F26005 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
 		3D769FF71BB932D700F26005 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D769FF31BB932D700F26005 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
-		3D769FF81BB932D700F26005 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D769FF51BB932D700F26005 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
-		3D769FFE1BB93B0200F26005 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D769FFC1BB93B0200F26005 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
 		3D769FFF1BB93B0200F26005 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D769FFD1BB93B0200F26005 /* main.m */; settings = {ASSET_TAGS = (); }; };
-		3D76A0091BB93BDF00F26005 /* libEasyLink_Debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D76A0071BB93BDF00F26005 /* libEasyLink_Debug.a */; settings = {ASSET_TAGS = (); }; };
 		3D76A00C1BB93BF500F26005 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D76A00B1BB93BF500F26005 /* Reachability.m */; settings = {ASSET_TAGS = (); }; };
 		3D76A0111BB93C2400F26005 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D76A00E1BB93C2400F26005 /* AsyncSocket.m */; settings = {ASSET_TAGS = (); }; };
 		3D76A0121BB93C2400F26005 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D76A0101BB93C2400F26005 /* AsyncUdpSocket.m */; settings = {ASSET_TAGS = (); }; };
 		3D76A0161BB93DC200F26005 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D76A0141BB93DC200F26005 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		3D76A0191BB93EB200F26005 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D76A0171BB93EB200F26005 /* LaunchScreen.xib */; settings = {ASSET_TAGS = (); }; };
+		3DA33E1D1BC2756F00E18253 /* EasylinkAliViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA33E1C1BC2756F00E18253 /* EasylinkAliViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3DA33E201BC2768100E18253 /* EasyLinkForAXZWifiLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA33E1F1BC2768100E18253 /* EasyLinkForAXZWifiLink.m */; settings = {ASSET_TAGS = (); }; };
+		3DD4B5FB1BBA654500CE20F0 /* EasylinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4B5FA1BBA654500CE20F0 /* EasylinkViewController.m */; settings = {ASSET_TAGS = (); }; };
+		3DD4B5FE1BBA74E900CE20F0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4B5FD1BBA74E900CE20F0 /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,14 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D5134761BC63D7600906812 /* libEasyLink.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEasyLink.a; path = EasylinkDemo/EasyLink/libEasyLink.a; sourceTree = SOURCE_ROOT; };
+		3D611A891BC4A58C00DC1F4B /* AXZWifiLinkProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXZWifiLinkProtocol.h; path = EasylinkDemo/EasyLink/AXZWifiLinkProtocol.h; sourceTree = SOURCE_ROOT; };
 		3D769FF11BB932D700F26005 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EasylinkDemo/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		3D769FF21BB932D700F26005 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = EasylinkDemo/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		3D769FF31BB932D700F26005 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = EasylinkDemo/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		3D769FF41BB932D700F26005 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = EasylinkDemo/ViewController.h; sourceTree = SOURCE_ROOT; };
-		3D769FF51BB932D700F26005 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = EasylinkDemo/ViewController.m; sourceTree = SOURCE_ROOT; };
 		3D769FFC1BB93B0200F26005 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = EasylinkDemo/Info.plist; sourceTree = SOURCE_ROOT; };
 		3D769FFD1BB93B0200F26005 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EasylinkDemo/main.m; sourceTree = SOURCE_ROOT; };
-		3D76A0071BB93BDF00F26005 /* libEasyLink_Debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEasyLink_Debug.a; path = EasylinkDemo/EasyLink/libEasyLink_Debug.a; sourceTree = SOURCE_ROOT; };
 		3D76A0081BB93BDF00F26005 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = route.h; path = EasylinkDemo/EasyLink/route.h; sourceTree = SOURCE_ROOT; };
 		3D76A00A1BB93BF500F26005 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = EasylinkDemo/EasyLink/Reachability/Reachability.h; sourceTree = SOURCE_ROOT; };
 		3D76A00B1BB93BF500F26005 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = EasylinkDemo/EasyLink/Reachability/Reachability.m; sourceTree = SOURCE_ROOT; };
@@ -49,6 +50,14 @@
 		3D76A0131BB93CF500F26005 /* EasyLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasyLink.h; path = EasylinkDemo/EasyLink/EasyLink.h; sourceTree = SOURCE_ROOT; };
 		3D76A0151BB93DC200F26005 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = EasylinkDemo/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D76A0181BB93EB200F26005 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = EasylinkDemo/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		3DA33E1B1BC2756F00E18253 /* EasylinkAliViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasylinkAliViewController.h; path = EasylinkDemo/EasylinkAliViewController.h; sourceTree = SOURCE_ROOT; };
+		3DA33E1C1BC2756F00E18253 /* EasylinkAliViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EasylinkAliViewController.m; path = EasylinkDemo/EasylinkAliViewController.m; sourceTree = SOURCE_ROOT; };
+		3DA33E1E1BC2768100E18253 /* EasyLinkForAXZWifiLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasyLinkForAXZWifiLink.h; path = EasylinkDemo/EasyLink/EasyLinkForAXZWifiLink.h; sourceTree = SOURCE_ROOT; };
+		3DA33E1F1BC2768100E18253 /* EasyLinkForAXZWifiLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EasyLinkForAXZWifiLink.m; path = EasylinkDemo/EasyLink/EasyLinkForAXZWifiLink.m; sourceTree = SOURCE_ROOT; };
+		3DD4B5F91BBA654500CE20F0 /* EasylinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasylinkViewController.h; path = EasylinkDemo/EasylinkViewController.h; sourceTree = SOURCE_ROOT; };
+		3DD4B5FA1BBA654500CE20F0 /* EasylinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EasylinkViewController.m; path = EasylinkDemo/EasylinkViewController.m; sourceTree = SOURCE_ROOT; };
+		3DD4B5FC1BBA74E900CE20F0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = EasylinkDemo/RootViewController.h; sourceTree = SOURCE_ROOT; };
+		3DD4B5FD1BBA74E900CE20F0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = EasylinkDemo/RootViewController.m; sourceTree = SOURCE_ROOT; };
 		3DFED6761AFCCFC50089FC07 /* EasylinkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasylinkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFED68F1AFCCFC50089FC07 /* EasyLinkDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyLinkDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFED6941AFCCFC50089FC07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D76A0091BB93BDF00F26005 /* libEasyLink_Debug.a in Frameworks */,
+				3D5134771BC63D7600906812 /* libEasyLink.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,10 +105,14 @@
 		3DFED6781AFCCFC50089FC07 /* Easylink Demo */ = {
 			isa = PBXGroup;
 			children = (
+				3DA33E1B1BC2756F00E18253 /* EasylinkAliViewController.h */,
+				3DA33E1C1BC2756F00E18253 /* EasylinkAliViewController.m */,
+				3DD4B5F91BBA654500CE20F0 /* EasylinkViewController.h */,
+				3DD4B5FA1BBA654500CE20F0 /* EasylinkViewController.m */,
+				3DD4B5FC1BBA74E900CE20F0 /* RootViewController.h */,
+				3DD4B5FD1BBA74E900CE20F0 /* RootViewController.m */,
 				3D769FF11BB932D700F26005 /* AppDelegate.h */,
 				3D769FF21BB932D700F26005 /* AppDelegate.m */,
-				3D769FF41BB932D700F26005 /* ViewController.h */,
-				3D769FF51BB932D700F26005 /* ViewController.m */,
 				3DFED6A51AFCD2AD0089FC07 /* EasyLink */,
 				3D769FF31BB932D700F26005 /* Images.xcassets */,
 				3DFED6791AFCCFC50089FC07 /* Supporting Files */,
@@ -137,11 +150,14 @@
 		3DFED6A51AFCD2AD0089FC07 /* EasyLink */ = {
 			isa = PBXGroup;
 			children = (
-				3DFED6AB1AFCD2AD0089FC07 /* Reachability */,
-				3DFED6BB1AFCD44F0089FC07 /* CocoaAsyncSocket-7.3.3 */,
-				3D76A0071BB93BDF00F26005 /* libEasyLink_Debug.a */,
+				3D5134761BC63D7600906812 /* libEasyLink.a */,
+				3D611A891BC4A58C00DC1F4B /* AXZWifiLinkProtocol.h */,
+				3DA33E1E1BC2768100E18253 /* EasyLinkForAXZWifiLink.h */,
+				3DA33E1F1BC2768100E18253 /* EasyLinkForAXZWifiLink.m */,
 				3D76A0131BB93CF500F26005 /* EasyLink.h */,
 				3D76A0081BB93BDF00F26005 /* route.h */,
+				3DFED6AB1AFCD2AD0089FC07 /* Reachability */,
+				3DFED6BB1AFCD44F0089FC07 /* CocoaAsyncSocket-7.3.3 */,
 			);
 			name = EasyLink;
 			path = EasyLink/EasyLink/Common;
@@ -221,7 +237,7 @@
 		3DFED66E1AFCCFC50089FC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "MXCHIP Inc";
 				TargetAttributes = {
 					3DFED6751AFCCFC50089FC07 = {
@@ -260,7 +276,6 @@
 			files = (
 				3D76A0191BB93EB200F26005 /* LaunchScreen.xib in Resources */,
 				3D769FF71BB932D700F26005 /* Images.xcassets in Resources */,
-				3D769FFE1BB93B0200F26005 /* Info.plist in Resources */,
 				3D76A0161BB93DC200F26005 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,10 +294,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D769FF81BB932D700F26005 /* ViewController.m in Sources */,
+				3DD4B5FB1BBA654500CE20F0 /* EasylinkViewController.m in Sources */,
+				3DD4B5FE1BBA74E900CE20F0 /* RootViewController.m in Sources */,
+				3DA33E201BC2768100E18253 /* EasyLinkForAXZWifiLink.m in Sources */,
 				3D76A0111BB93C2400F26005 /* AsyncSocket.m in Sources */,
 				3D769FF61BB932D700F26005 /* AppDelegate.m in Sources */,
 				3D76A0121BB93C2400F26005 /* AsyncUdpSocket.m in Sources */,
+				3DA33E1D1BC2756F00E18253 /* EasylinkAliViewController.m in Sources */,
 				3D769FFF1BB93B0200F26005 /* main.m in Sources */,
 				3D76A00C1BB93BF500F26005 /* Reachability.m in Sources */,
 			);
@@ -347,6 +365,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -419,15 +438,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Easlink",
-					send,
-					demo/EasyLink/EasyLink/Common,
-					"$(PROJECT_DIR)/Easlink",
-					send,
-					demo/EasyLink/EasyLink/Common,
-					"$(PROJECT_DIR)/Easlink",
-					send,
-					demo/EasyLink/EasyLink/Common,
 					"$(PROJECT_DIR)/EasylinkDemo/EasyLink",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mxchip.EasyLinkDemo;
@@ -445,15 +455,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Easlink",
-					send,
-					demo/EasyLink/EasyLink/Common,
-					"$(PROJECT_DIR)/Easlink",
-					send,
-					demo/EasyLink/EasyLink/Common,
-					"$(PROJECT_DIR)/Easlink",
-					send,
-					demo/EasyLink/EasyLink/Common,
 					"$(PROJECT_DIR)/EasylinkDemo/EasyLink",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mxchip.EasyLinkDemo;

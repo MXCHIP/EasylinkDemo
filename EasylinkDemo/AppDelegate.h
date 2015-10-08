@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+
+#define ConsoleLog(A, ...) do{[[(AppDelegate*)[[UIApplication sharedApplication]delegate] console] displayDebug:[NSString stringWithFormat:@"%s:%d-> %@", __func__, __LINE__, [NSString stringWithFormat:(A), ##__VA_ARGS__]]];} while(1==0)
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (weak, nonatomic) UITextView *console;
 
 @end
+
+@interface UITextView (Additions)
+- (void)displayDebug:(NSString *)debugInfo;
+@end
+
+
 

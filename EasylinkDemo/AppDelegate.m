@@ -8,11 +8,23 @@
 
 #import "AppDelegate.h"
 
+
+@implementation UITextView (Additions)
+- (void)displayDebug:(NSString *)debugInfo
+{
+    self.text = [NSString stringWithFormat:@"%@\r\n%@", self.text, debugInfo];
+    [self scrollRangeToVisible:NSMakeRange(self.text.length, 1)];
+}
+
+@end
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
+@synthesize console;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
