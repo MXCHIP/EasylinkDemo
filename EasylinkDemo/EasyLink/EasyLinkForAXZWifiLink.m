@@ -11,12 +11,18 @@
 #import "EasyLinkForAXZWifiLink.h"
 #import "EasyLink.h"
 
+@interface EasyLinkForAXZWifiLink ()
+
+-(void)searchForCell:(NSDictionary *)sectors;
+
+@end
+
 @implementation EasyLinkForAXZWifiLink
 
 -(id)init{
     self = [super init];
     if (self) {
-        _aLinkDict = [NSMutableDictionary dictionaryWithCapacity:8];
+        
     }
     return self;
 }
@@ -33,6 +39,7 @@
 {
     NSMutableDictionary *wlanConfig = [NSMutableDictionary dictionaryWithCapacity:20];
     _easylink_config = [[EASYLINK alloc]initWithDelegate:self];
+    _aLinkDict = [NSMutableDictionary dictionaryWithCapacity:8];
     
     [wlanConfig setObject: [ssid dataUsingEncoding:NSUTF8StringEncoding] forKey:KEY_SSID];
     [wlanConfig setObject: password forKey:KEY_PASSWORD];
@@ -54,34 +61,65 @@
     [_easylink_config unInit];
 }
 
+-(void)searchForCell:(NSDictionary *)sectors
+{
+    for(NSDictionary *sector in sectors){
+        for(NSDictionary *cell in [sector objectForKey:@"C"]){
+            if([[cell objectForKey:@"C"] isKindOfClass:[NSArray class]]){ //This is a sun-menu
+                [self searchForCell:[cell objectForKey:@"C"]];
+                continue;
+            }
+            NSLog(@"found: %@",[cell description]);
+
+            if([[cell objectForKey:@"N"] isEqualToString:@"mac"]){
+                [_aLinkDict setObject:[cell objectForKey:@"C"] forKey:@"mac"];
+                continue;
+            }
+            if([[cell objectForKey:@"N"] isEqualToString:@"manufacturer"]){
+                [_aLinkDict setObject:[cell objectForKey:@"C"] forKey:@"manufacturer"];
+                continue;
+            }
+            if([[cell objectForKey:@"N"] isEqualToString:@"model"]){
+                [_aLinkDict setObject:[cell objectForKey:@"C"] forKey:@"model"];
+                continue;
+            }
+            if([[cell objectForKey:@"N"] isEqualToString:@"name"]){
+                [_aLinkDict setObject:[cell objectForKey:@"C"] forKey:@"name"];
+                continue;
+            }
+            if([[cell objectForKey:@"N"] isEqualToString:@"sn"]){
+                [_aLinkDict setObject:[cell objectForKey:@"C"] forKey:@"sn"];
+                continue;
+            }
+            if([[cell objectForKey:@"N"] isEqualToString:@"type"]){
+                [_aLinkDict setObject:[cell objectForKey:@"C"] forKey:@"type"];
+                continue;
+            }
+            if([[cell objectForKey:@"N"] isEqualToString:@"uuid"]){
+                [_aLinkDict setObject:[cell objectForKey:@"C"] forKey:@"uuid"];
+                continue;
+            }
+            if([[cell objectForKey:@"N"] isEqualToString:@"version"]){
+                [_aLinkDict setObject:[cell objectForKey:@"C"] forKey:@"version"];
+                continue;
+            }
+        }
+    }
+
+}
 
 #pragma mark - EasyLink delegate
 
 - (void)onFoundByFTC:(NSNumber *)client withConfiguration: (NSDictionary *)configDict
 {
+    [self searchForCell:[configDict objectForKey:@"C"]];
     [_easylink_config configFTCClient:client withConfiguration:nil];
-    if([configDict objectForKey:@"mac"]!=nil)
-        [_aLinkDict setObject:[configDict objectForKey:@"mac"] forKey:@"mac"];
-    if([configDict objectForKey:@"manufacturer"]!=nil)
-        [_aLinkDict setObject:[configDict objectForKey:@"manufacturer"] forKey:@"manufacturer"];
-    if([configDict objectForKey:@"model"]!=nil)
-        [_aLinkDict setObject:[configDict objectForKey:@"model"] forKey:@"model"];
-    if([configDict objectForKey:@"name"]!=nil)
-        [_aLinkDict setObject:[configDict objectForKey:@"name"] forKey:@"name"];
-    if([configDict objectForKey:@"sn"]!=nil)
-        [_aLinkDict setObject:[configDict objectForKey:@"sn"] forKey:@"sn"];
-    if([configDict objectForKey:@"type"]!=nil)
-        [_aLinkDict setObject:[configDict objectForKey:@"type"] forKey:@"type"];
-    if([configDict objectForKey:@"uuid"]!=nil)
-        [_aLinkDict setObject:[configDict objectForKey:@"uuid"] forKey:@"uuid"];
-    if([configDict objectForKey:@"version"]!=nil)
-        [_aLinkDict setObject:[configDict objectForKey:@"version"] forKey:@"version"];
 }
 
 
 - (void)onFound:(NSNumber *)client withName:(NSString *)name mataData: (NSDictionary *)mataDataDict
 {
-    
+    [_easylink_config stopTransmitting];
 }
 
 
