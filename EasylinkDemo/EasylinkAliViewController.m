@@ -29,6 +29,7 @@
     wifiReachability = [Reachability reachabilityForLocalWiFi];
     [wifiReachability startNotifier];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wifiStatusChanged:) name:kReachabilityChangedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appEnterInforground:) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -36,6 +37,7 @@
     ConsoleLog(@"Stop EasyLink ali sending.");
     [easylinkAliButton setSelected:NO];
     [easylink_ali stopLink];
+    easylink_ali = nil;
     [super viewWillDisappear:animated];
 }
 
@@ -62,6 +64,7 @@
     }else{
         [button setSelected:NO];
         [easylink_ali stopLink];
+        easylink_ali = nil;
         ConsoleLog(@"Stop EasyLink ali sending.");
     }
 }
@@ -84,6 +87,12 @@
     if ( netStatus != NotReachable ) {
         ssidField.text = [EASYLINK ssidForConnectedNetwork];
     }
+}
+
+- (void)appEnterInforground:(NSNotification*)notification{
+    ConsoleLog(@"Enter inforground.");
+    //[easylink_ali stopLink];
+    [self easyLinkAliButtonPressed: easylinkAliButton];
 }
 
 

@@ -38,7 +38,7 @@
 - (void)startLinkWith:(NSString*)ssid andPassword:(NSString*)password andModel:(NSString*)model andCallback:(AXZWifiLinkCallback)callback
 {
     NSMutableDictionary *wlanConfig = [NSMutableDictionary dictionaryWithCapacity:20];
-    _easylink_config = [[EASYLINK alloc]initWithDelegate:self];
+    _easylink_config = [[EASYLINK alloc]initForDebug:true WithDelegate:self];
     _aLinkDict = [NSMutableDictionary dictionaryWithCapacity:8];
     
     [wlanConfig setObject: [ssid dataUsingEncoding:NSUTF8StringEncoding] forKey:KEY_SSID];

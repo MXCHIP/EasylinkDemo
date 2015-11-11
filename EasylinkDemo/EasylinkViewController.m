@@ -31,7 +31,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     ConsoleLog(@"EasyLink library initialize.");
-    easylink_config = [[EASYLINK alloc]initWithDelegate:self];
+    easylink_config = [[EASYLINK alloc]initForDebug:true WithDelegate:self];
     [easylinkButton setSelected:NO];
     [super viewWillAppear:animated];
 }
