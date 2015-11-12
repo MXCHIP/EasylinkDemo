@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D60C5851BE352B6008A747C /* libEasyLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D60C5841BE352B6008A747C /* libEasyLink.a */; };
+		3D757A3C1BF474D600EBAECC /* libEasyLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D757A3B1BF474D600EBAECC /* libEasyLink.a */; };
 		3D769FF61BB932D700F26005 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D769FF21BB932D700F26005 /* AppDelegate.m */; };
 		3D769FF71BB932D700F26005 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D769FF31BB932D700F26005 /* Images.xcassets */; };
 		3D769FFF1BB93B0200F26005 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D769FFD1BB93B0200F26005 /* main.m */; };
@@ -18,6 +18,8 @@
 		3DD4B5FB1BBA654500CE20F0 /* EasylinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4B5FA1BBA654500CE20F0 /* EasylinkViewController.m */; };
 		3DD4B5FE1BBA74E900CE20F0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4B5FD1BBA74E900CE20F0 /* RootViewController.m */; };
 		3DD5ED121BD8F0C200654389 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD5ED111BD8F0C200654389 /* HomeKit.framework */; };
+		3DEB952F1BF3383E0005C635 /* MXCHIPAirlink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB952E1BF3383E0005C635 /* MXCHIPAirlink.m */; };
+		3DEB95321BF347EF0005C635 /* GizwitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB95311BF347EF0005C635 /* GizwitsViewController.m */; };
 		B5B7DD1B9DC5EAEE8D853F75 /* libPods-EasylinkDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF4F4B97587CFE133CC74B3 /* libPods-EasylinkDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -34,14 +36,13 @@
 /* Begin PBXFileReference section */
 		1146D7FD9E809361EE929C7D /* Pods-EasylinkDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasylinkDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasylinkDemo/Pods-EasylinkDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		2CF4F4B97587CFE133CC74B3 /* libPods-EasylinkDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasylinkDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D60C5841BE352B6008A747C /* libEasyLink.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEasyLink.a; path = EasylinkDemo/EasyLink/libEasyLink.a; sourceTree = SOURCE_ROOT; };
 		3D611A891BC4A58C00DC1F4B /* AXZWifiLinkProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXZWifiLinkProtocol.h; path = EasylinkDemo/EasyLink/AXZWifiLinkProtocol.h; sourceTree = SOURCE_ROOT; };
+		3D757A3B1BF474D600EBAECC /* libEasyLink.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEasyLink.a; path = EasylinkDemo/EasyLink/libEasyLink.a; sourceTree = SOURCE_ROOT; };
 		3D769FF11BB932D700F26005 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EasylinkDemo/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		3D769FF21BB932D700F26005 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = EasylinkDemo/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		3D769FF31BB932D700F26005 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = EasylinkDemo/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		3D769FFC1BB93B0200F26005 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = EasylinkDemo/Info.plist; sourceTree = SOURCE_ROOT; };
 		3D769FFD1BB93B0200F26005 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = EasylinkDemo/main.m; sourceTree = SOURCE_ROOT; };
-		3D76A0081BB93BDF00F26005 /* route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = route.h; path = EasylinkDemo/EasyLink/route.h; sourceTree = SOURCE_ROOT; };
 		3D76A0131BB93CF500F26005 /* EasyLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasyLink.h; path = EasylinkDemo/EasyLink/EasyLink.h; sourceTree = SOURCE_ROOT; };
 		3D76A0151BB93DC200F26005 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = EasylinkDemo/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D76A0181BB93EB200F26005 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = EasylinkDemo/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -55,6 +56,10 @@
 		3DD4B5FD1BBA74E900CE20F0 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = EasylinkDemo/RootViewController.m; sourceTree = SOURCE_ROOT; };
 		3DD5ED111BD8F0C200654389 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		3DD5ED131BD8F0C200654389 /* EasylinkDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = EasylinkDemo.entitlements; path = EasylinkDemo/EasylinkDemo.entitlements; sourceTree = "<group>"; };
+		3DEB952D1BF3383E0005C635 /* MXCHIPAirlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MXCHIPAirlink.h; path = EasylinkDemo/EasyLink/MXCHIPAirlink.h; sourceTree = SOURCE_ROOT; };
+		3DEB952E1BF3383E0005C635 /* MXCHIPAirlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MXCHIPAirlink.m; path = EasylinkDemo/EasyLink/MXCHIPAirlink.m; sourceTree = SOURCE_ROOT; };
+		3DEB95301BF347EF0005C635 /* GizwitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GizwitsViewController.h; path = EasylinkDemo/GizwitsViewController.h; sourceTree = SOURCE_ROOT; };
+		3DEB95311BF347EF0005C635 /* GizwitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GizwitsViewController.m; path = EasylinkDemo/GizwitsViewController.m; sourceTree = SOURCE_ROOT; };
 		3DFED6761AFCCFC50089FC07 /* EasylinkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasylinkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFED68F1AFCCFC50089FC07 /* EasyLinkDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyLinkDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7BD3516F9073DEE190B106 /* Pods-EasylinkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasylinkDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasylinkDemo/Pods-EasylinkDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,7 +72,7 @@
 			files = (
 				3DD5ED121BD8F0C200654389 /* HomeKit.framework in Frameworks */,
 				B5B7DD1B9DC5EAEE8D853F75 /* libPods-EasylinkDemo.a in Frameworks */,
-				3D60C5851BE352B6008A747C /* libEasyLink.a in Frameworks */,
+				3D757A3C1BF474D600EBAECC /* libEasyLink.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +112,8 @@
 		3DFED6781AFCCFC50089FC07 /* Easylink Demo */ = {
 			isa = PBXGroup;
 			children = (
+				3DEB95301BF347EF0005C635 /* GizwitsViewController.h */,
+				3DEB95311BF347EF0005C635 /* GizwitsViewController.m */,
 				3DA33E1B1BC2756F00E18253 /* EasylinkAliViewController.h */,
 				3DA33E1C1BC2756F00E18253 /* EasylinkAliViewController.m */,
 				3DD4B5F91BBA654500CE20F0 /* EasylinkViewController.h */,
@@ -151,12 +158,13 @@
 		3DFED6A51AFCD2AD0089FC07 /* EasyLink */ = {
 			isa = PBXGroup;
 			children = (
-				3D60C5841BE352B6008A747C /* libEasyLink.a */,
+				3D757A3B1BF474D600EBAECC /* libEasyLink.a */,
+				3DEB952D1BF3383E0005C635 /* MXCHIPAirlink.h */,
+				3DEB952E1BF3383E0005C635 /* MXCHIPAirlink.m */,
 				3D611A891BC4A58C00DC1F4B /* AXZWifiLinkProtocol.h */,
 				3DA33E1E1BC2768100E18253 /* EasyLinkForAXZWifiLink.h */,
 				3DA33E1F1BC2768100E18253 /* EasyLinkForAXZWifiLink.m */,
 				3D76A0131BB93CF500F26005 /* EasyLink.h */,
-				3D76A0081BB93BDF00F26005 /* route.h */,
 			);
 			name = EasyLink;
 			path = EasyLink/EasyLink/Common;
@@ -323,7 +331,9 @@
 			files = (
 				3DD4B5FB1BBA654500CE20F0 /* EasylinkViewController.m in Sources */,
 				3DD4B5FE1BBA74E900CE20F0 /* RootViewController.m in Sources */,
+				3DEB95321BF347EF0005C635 /* GizwitsViewController.m in Sources */,
 				3DA33E201BC2768100E18253 /* EasyLinkForAXZWifiLink.m in Sources */,
+				3DEB952F1BF3383E0005C635 /* MXCHIPAirlink.m in Sources */,
 				3D769FF61BB932D700F26005 /* AppDelegate.m in Sources */,
 				3DA33E1D1BC2756F00E18253 /* EasylinkAliViewController.m in Sources */,
 				3D769FFF1BB93B0200F26005 /* main.m in Sources */,

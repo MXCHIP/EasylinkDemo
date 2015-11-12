@@ -6,18 +6,10 @@
 //  Copyright (c) 2015年 MXCHIP Inc. All rights reserved.
 //
 
-#import "EasylinkAliViewController.h"
+#import "GizwitsViewController.h"
 #import "AppDelegate.h"
 
-
-
-@interface EasylinkAliViewController (private)
-
-- (void)AXZWifiLinkCallback:(NSDictionary *)dict;
-
-@end
-
-@implementation EasylinkAliViewController
+@implementation GizwitsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,12 +24,19 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appEnterInforground:) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    airlink = [[MXCHIPAirlink alloc] init];
+    ConsoleLog(@"Airlink version:%@.", airlink.version);
+    [super viewDidAppear:animated];
+}
+
 -(void)viewWillDisappear:(BOOL)animated
 {
     ConsoleLog(@"Stop EasyLink sending.");
-    [easylinkAliButton setSelected:NO];
-    [easylink_ali stopLink];
-    easylink_ali = nil;
+    [airlinkButton setSelected:NO];
+    [airlink stop];
+    airlink = nil;
     [super viewWillDisappear:animated];
 }
 
@@ -46,26 +45,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction) easyLinkAliButtonPressed: (UIButton *) button
+- (IBAction)airlinkButtonPressed: (UIButton *)button
 {
-    if(button.selected == NO){
+   
+    if(airlink.isRunning == NO){
         [button setSelected:YES];
-        easylink_ali = [[EasyLinkForAXZWifiLink alloc] init];
-        [easylink_ali startLinkWith:ssidField.text
-                        andPassword:passwordField.text
-                           andModel:moduleField.text
-                        andCallback:^(NSDictionary *dict){
-                            ConsoleLog(@"EasyLink ali config success, %@.", [dict description] );
-                            [button setSelected:NO];
-                            ConsoleLog(@"Stop EasyLink ali sending.");
-                        }];
-        
+//        [airlink start:ssidField.text
+//                   key:passwordField.text timeout:[timeOutField.text intValue]
+//           andCallback:^(MXCHIPAirlinkEvent event){
+//               if(event == MXCHIPAirlinkEventStop){
+//                   [button setSelected:NO];
+//                   ConsoleLog(@"Airlink stoped.");
+//               }else if(event == MXCHIPAirlinkEventFound)
+//                   ConsoleLog(@"Airlink find a new device.");
+//               else
+//                   ConsoleLog(@"Unknown event.");
+//           }];
+        [airlink start:ssidField.text key:passwordField.text timeout:30 andCallback:nil];
         ConsoleLog(@"Sending ssid: %@, password: %@", ssidField.text, passwordField.text);
     }else{
         [button setSelected:NO];
-        [easylink_ali stopLink];
-        easylink_ali = nil;
-        ConsoleLog(@"Stop EasyLink ali sending.");
+        [airlink stop];
+        ConsoleLog(@"Stop airlink sending.");
     }
 }
 

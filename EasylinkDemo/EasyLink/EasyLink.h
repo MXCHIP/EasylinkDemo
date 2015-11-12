@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <SystemConfiguration/CaptiveNetwork.h>
-#import "AsyncUdpSocket.h"
-#import "AsyncSocket.h"
-#import "Reachability.h"
+
+
+@class ELAsyncUdpSocket;
+@class ELAsyncSocket;
+@class ELReachability;
+
 
 typedef enum{
     EASYLINK_V1 = 0,
@@ -42,7 +45,7 @@ typedef enum{
 #define MessageCount 100
 
 @protocol EasyLinkFTCDelegate
-@required
+@optional
 /**
  @brief A new FTC client is found by FTC server in EasyLink
  @param client:         Client identifier.
@@ -70,7 +73,6 @@ typedef enum{
  */
 - (void)onDisconnectFromFTC:(NSNumber *)client  withError:(bool)err;
 
-@optional
 /**
  @brief EasyLink stage is changed during soft ap configuration mode
  @param stage:         The current stage.
@@ -93,10 +95,10 @@ NSNetServiceDelegate>{
     EasyLinkMode _mode;
     
     NSMutableArray *multicastArray, *broadcastArray;   //Used for EasyLink transmitting
-    AsyncUdpSocket *multicastSocket, *broadcastSocket;
+    ELAsyncUdpSocket *multicastSocket, *broadcastSocket;
     
     //Used for EasyLink first time configuration
-    AsyncSocket *ftcServerSocket;
+    ELAsyncSocket *ftcServerSocket;
     NSMutableArray *ftcClients;
     NSTimer *closeFTCClientTimer;
     
@@ -105,7 +107,7 @@ NSNetServiceDelegate>{
     NSDictionary * _configDict;
     
     CFHTTPMessageRef inComingMessageArray[MessageCount];
-    Reachability *wifiReachability;
+    ELReachability *wifiReachability;
     EasyLinkSoftApStage _softAPStage;
     uint32_t _identifier;
     
@@ -122,10 +124,10 @@ NSNetServiceDelegate>{
 @property (nonatomic, readwrite) float easyLinkV2DelayPerBlock;    //Default value: 20ms, a block send 1 package
 
 /* Enable debug log when EasyLink lib is running, disabled in default */
-@property float enableDebug;
+@property (nonatomic, readwrite) BOOL enableDebug;
 
 - (id)initWithDelegate:(id)delegate;
-- (id)initForDebug:(bool)enable WithDelegate:(id)delegate;
+- (id)initForDebug:(BOOL)enable WithDelegate:(id)delegate;
 
 - (id)delegate;
 - (void)setDelegate:(id)delegate;
@@ -383,19 +385,19 @@ NSNetServiceDelegate>{
 
 /**
  @brief Transmit wlan configurations to MiCO device, and start to find new connected device
-        using bonjour protocol. EasyLink will send a random number to MiCO device,
-        that make MiCO devices have an unique idenfifier in every configuration procedure.
-        So even config a same device, two configuration make it different. EasyLink generate
-        callback - (void)onFound: withName: mataData: after find a new device. After that
-        EasyLink will try to connect to MiCO device this http protocol, and fetch configurations
-        on the MiCO device. If you enable local config server on the device, a callback will
-        be generate: - (void)onFoundByFTC: withConfiguration:.
+ using bonjour protocol. EasyLink will send a random number to MiCO device,
+ that make MiCO devices have an unique idenfifier in every configuration procedure.
+ So even config a same device, two configuration make it different. EasyLink generate
+ callback - (void)onFound: withName: mataData: after find a new device. After that
+ EasyLink will try to connect to MiCO device this http protocol, and fetch configurations
+ on the MiCO device. If you enable local config server on the device, a callback will
+ be generate: - (void)onFoundByFTC: withConfiguration:.
  
-        通过EasyLink功能将无线网络参数发送到MiCO设备，同时EasyLink将启动bonjour协议查找新连接的MiCO设备。
-        每一次调用都会产生一个随机码发送给MiCO设备，使得每一次配网成功的设备都有不同的编号，防止同一个设备在
-        不同的配置过程中被发现。当发现新设备后，产生回调：- (void)onFound: withName: mataData:
-        的同时EasyLink库会按HTTP协议尝试连接到新设备，如果MiCO设备上开启了本地配置服务，就会连接成功，产生回调：
-        - (void)onFoundByFTC: withConfiguration:
+ 通过EasyLink功能将无线网络参数发送到MiCO设备，同时EasyLink将启动bonjour协议查找新连接的MiCO设备。
+ 每一次调用都会产生一个随机码发送给MiCO设备，使得每一次配网成功的设备都有不同的编号，防止同一个设备在
+ 不同的配置过程中被发现。当发现新设备后，产生回调：- (void)onFound: withName: mataData:
+ 的同时EasyLink库会按HTTP协议尝试连接到新设备，如果MiCO设备上开启了本地配置服务，就会连接成功，产生回调：
+ - (void)onFoundByFTC: withConfiguration:
  @note  Should be excuted before (void)transmitSettings.
  @note  Compatiable with all MiCO after 2.3.0. 设备运行的MiCO版本需要高于2.3.0
  @param wlanConfigDict: Wlan configurations, include SSID, password, address etc. refer to #define KEY_XXX
@@ -408,20 +410,20 @@ NSNetServiceDelegate>{
 
 /**
  @brief This API contain all functions in - (void)prepareEasyLink:info:mode:, but it deliver
-        iOS device's IP address rather than a random number. Device running MiCO lower than
-        2.3.0 will connect to this address and send its configurations, EasyLink will generate
-        - (void)onFoundByFTC: withConfiguration: directly without call
-        - (void)onFound: withName: mataData:, because this new dvice is not found by bonjour.
-        When config a MiCO device newer than 2.3.0, and config one device twice in less than
-        1 miniute, Easylink wll generate wrong callback  - (void)onFound: withName: mataData:
-        That is because EasyLink cannot find any difference on the same device in different 
-        configuration procedures.
+ iOS device's IP address rather than a random number. Device running MiCO lower than
+ 2.3.0 will connect to this address and send its configurations, EasyLink will generate
+ - (void)onFoundByFTC: withConfiguration: directly without call
+ - (void)onFound: withName: mataData:, because this new dvice is not found by bonjour.
+ When config a MiCO device newer than 2.3.0, and config one device twice in less than
+ 1 miniute, Easylink wll generate wrong callback  - (void)onFound: withName: mataData:
+ That is because EasyLink cannot find any difference on the same device in different
+ configuration procedures.
  
-        该API包含- (void)prepareEasyLink:info:mode: 中的所有功能，但是传输的不是随机编码而是iOS设备的地址，
-        在低于2.3.0版本的MiCO中，设备会按照这个地址连接到iOS设备并且直接产生回调：- (void)onFoundByFTC: withConfiguration:
-        而不产生通过bonjour协议产生的回调：- (void)onFound: withName: mataData:
-        由于不传输随机数，EasyLink无法区分同一个设备在不同的配置下有任何不同，因此，使得在对版本高于2.3.0的MiCO
-        设备进行配置时，如果对同一个设备两次配置的时间少于1分钟，会产生针对前一次配置的错误回调
+ 该API包含- (void)prepareEasyLink:info:mode: 中的所有功能，但是传输的不是随机编码而是iOS设备的地址，
+ 在低于2.3.0版本的MiCO中，设备会按照这个地址连接到iOS设备并且直接产生回调：- (void)onFoundByFTC: withConfiguration:
+ 而不产生通过bonjour协议产生的回调：- (void)onFound: withName: mataData:
+ 由于不传输随机数，EasyLink无法区分同一个设备在不同的配置下有任何不同，因此，使得在对版本高于2.3.0的MiCO
+ 设备进行配置时，如果对同一个设备两次配置的时间少于1分钟，会产生针对前一次配置的错误回调
  
  @note  Should be excuted before (void)transmitSettings.
  @note  Compatiable with all MiCO versions. 兼容所有MiCO版本
@@ -451,7 +453,7 @@ NSNetServiceDelegate>{
  Once the device has received, it will disconnect, and exit the EasyLionk configuration mode.
  This function initialize the device like cloud servive account, password, working configures
  etc. when user first connect the device to Internet.
- @note  This function can only be called a new device is called by 
+ @note  This function can only be called a new device is called by
  - (void)onFoundByFTC:(NSNumber *) withConfiguration: (NSDictionary *)
  @param client:         Client identifier, read by onFoundByFTC:currentConfig: in protocol
  EasyLinkFTCDelegate.
@@ -482,8 +484,15 @@ NSNetServiceDelegate>{
  */
 - (void)closeFTCClient:(NSNumber *)client;
 
+- (void)closeFTCServer;
+
 
 #pragma mark - Tools -
+
+/**
+ @brief Return the EasyLink library version.
+ */
++ (NSString *)version;
 
 /**
  @brief Return the WLan SSID string(UTF8 conding) connected by iOS currently.

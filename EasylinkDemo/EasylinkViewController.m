@@ -26,6 +26,7 @@
     wifiReachability = [Reachability reachabilityForLocalWiFi];
     [wifiReachability startNotifier];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(wifiStatusChanged:) name:kReachabilityChangedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appEnterInforground:) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -112,6 +113,18 @@
 
 #pragma mark - Wi-Fi status changed -
 - (void)wifiStatusChanged:(NSNotification*)notification{
+    NetworkStatus netStatus = [wifiReachability currentReachabilityStatus];
+    
+    /* iOS has connect to a wireless router */
+    if ( netStatus != NotReachable && ![[EASYLINK ssidForConnectedNetwork] hasPrefix:@"EasyLink_"] && easylink_config.softAPSending == false) {
+        ssidField.text = [EASYLINK ssidForConnectedNetwork];
+        _ssidData = [EASYLINK ssidDataForConnectedNetwork];
+    }else{
+        ConsoleLog(@"Not connected to a WiFi network.");
+    }
+}
+
+- (void)appEnterInforground:(NSNotification*)notification{
     NetworkStatus netStatus = [wifiReachability currentReachabilityStatus];
     
     /* iOS has connect to a wireless router */
