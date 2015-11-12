@@ -1,6 +1,6 @@
 //
-//  EasyLinkForAXZWifiLink.m
-//  EasyLink
+//  MXCHIPAirlink.m
+//  MXCHIPAirlink
 //
 //  Created by William Xu on 13-9-28.
 //  Copyright (c) 2015年 MXCHIP. All rights reserved.
@@ -27,14 +27,7 @@
     return self;
 }
 
-/**
- * 开始配网，发配网包（ssid+密码），设备连接路由器，发现设备，设备连接Alink云并获取设备uuid，APP得到uuid设备配网完成。
- *
- * @param ssid 家庭路由器ssid信息
- * @param password 家庭路由器密码
- * @param model 设备model信息
- * @param callback 当前配网进度回调,配网成功或失败都会回调
- */
+
 - (void)start:(NSString*)ssid key:(NSString*)key timeout:(int)timeout andCallback:(onEvent)callback
 {
     if( _isRunning == true )
