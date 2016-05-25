@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D757A3C1BF474D600EBAECC /* libEasyLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D757A3B1BF474D600EBAECC /* libEasyLink.a */; };
 		3D769FF61BB932D700F26005 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D769FF21BB932D700F26005 /* AppDelegate.m */; };
 		3D769FF71BB932D700F26005 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D769FF31BB932D700F26005 /* Images.xcassets */; };
 		3D769FFF1BB93B0200F26005 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D769FFD1BB93B0200F26005 /* main.m */; };
@@ -15,6 +14,7 @@
 		3D76A0191BB93EB200F26005 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D76A0171BB93EB200F26005 /* LaunchScreen.xib */; };
 		3DA33E1D1BC2756F00E18253 /* EasylinkAliViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA33E1C1BC2756F00E18253 /* EasylinkAliViewController.m */; };
 		3DA33E201BC2768100E18253 /* EasyLinkForAXZWifiLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA33E1F1BC2768100E18253 /* EasyLinkForAXZWifiLink.m */; };
+		3DB9C75D1CF5ACE100576DA2 /* libEasyLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB9C75C1CF5ACE100576DA2 /* libEasyLink.a */; };
 		3DD4B5FB1BBA654500CE20F0 /* EasylinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4B5FA1BBA654500CE20F0 /* EasylinkViewController.m */; };
 		3DD4B5FE1BBA74E900CE20F0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4B5FD1BBA74E900CE20F0 /* RootViewController.m */; };
 		3DEB952F1BF3383E0005C635 /* MXCHIPAirlink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB952E1BF3383E0005C635 /* MXCHIPAirlink.m */; };
@@ -36,7 +36,6 @@
 		1146D7FD9E809361EE929C7D /* Pods-EasylinkDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasylinkDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasylinkDemo/Pods-EasylinkDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		2CF4F4B97587CFE133CC74B3 /* libPods-EasylinkDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasylinkDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D611A891BC4A58C00DC1F4B /* AXZWifiLinkProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXZWifiLinkProtocol.h; path = EasylinkDemo/EasyLink/AXZWifiLinkProtocol.h; sourceTree = SOURCE_ROOT; };
-		3D757A3B1BF474D600EBAECC /* libEasyLink.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEasyLink.a; path = EasylinkDemo/EasyLink/libEasyLink.a; sourceTree = SOURCE_ROOT; };
 		3D769FF11BB932D700F26005 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EasylinkDemo/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		3D769FF21BB932D700F26005 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = EasylinkDemo/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		3D769FF31BB932D700F26005 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = EasylinkDemo/Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -49,6 +48,7 @@
 		3DA33E1C1BC2756F00E18253 /* EasylinkAliViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EasylinkAliViewController.m; path = EasylinkDemo/EasylinkAliViewController.m; sourceTree = SOURCE_ROOT; };
 		3DA33E1E1BC2768100E18253 /* EasyLinkForAXZWifiLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasyLinkForAXZWifiLink.h; path = EasylinkDemo/EasyLink/EasyLinkForAXZWifiLink.h; sourceTree = SOURCE_ROOT; };
 		3DA33E1F1BC2768100E18253 /* EasyLinkForAXZWifiLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EasyLinkForAXZWifiLink.m; path = EasylinkDemo/EasyLink/EasyLinkForAXZWifiLink.m; sourceTree = SOURCE_ROOT; };
+		3DB9C75C1CF5ACE100576DA2 /* libEasyLink.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEasyLink.a; path = EasylinkDemo/EasyLink/libEasyLink.a; sourceTree = SOURCE_ROOT; };
 		3DD4B5F91BBA654500CE20F0 /* EasylinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EasylinkViewController.h; path = EasylinkDemo/EasylinkViewController.h; sourceTree = SOURCE_ROOT; };
 		3DD4B5FA1BBA654500CE20F0 /* EasylinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EasylinkViewController.m; path = EasylinkDemo/EasylinkViewController.m; sourceTree = SOURCE_ROOT; };
 		3DD4B5FC1BBA74E900CE20F0 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = EasylinkDemo/RootViewController.h; sourceTree = SOURCE_ROOT; };
@@ -69,7 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5B7DD1B9DC5EAEE8D853F75 /* libPods-EasylinkDemo.a in Frameworks */,
-				3D757A3C1BF474D600EBAECC /* libEasyLink.a in Frameworks */,
+				3DB9C75D1CF5ACE100576DA2 /* libEasyLink.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +155,7 @@
 		3DFED6A51AFCD2AD0089FC07 /* EasyLink */ = {
 			isa = PBXGroup;
 			children = (
-				3D757A3B1BF474D600EBAECC /* libEasyLink.a */,
+				3DB9C75C1CF5ACE100576DA2 /* libEasyLink.a */,
 				3DEB952D1BF3383E0005C635 /* MXCHIPAirlink.h */,
 				3DEB952E1BF3383E0005C635 /* MXCHIPAirlink.m */,
 				3D611A891BC4A58C00DC1F4B /* AXZWifiLinkProtocol.h */,
@@ -476,7 +476,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mxchip.EasyLinkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6eec0500-7ad4-4364-a9b0-6347097b1801";
 			};
 			name = Debug;
 		};
@@ -496,7 +496,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mxchip.EasyLinkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "6eec0500-7ad4-4364-a9b0-6347097b1801";
 			};
 			name = Release;
 		};
