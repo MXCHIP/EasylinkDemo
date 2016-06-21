@@ -162,6 +162,7 @@
                     <tabBarItem key="tabBarItem" title="Easylink Native" id="Ya8-q8-Y0K"/>
                     <connections>
                         <outlet property="easylinkButton" destination="BAF-gO-vdj" id="wH5-Va-Img"/>
+                        <outlet property="encryptKeyField" destination="d35-9P-ucP" id="jez-aA-lBi"/>
                         <outlet property="passwordField" destination="AA6-F2-7sb" id="6AB-3n-Zaj"/>
                         <outlet property="ssidField" destination="cxt-N3-5Zs" id="gxH-v2-7mh"/>
                     </connections>
