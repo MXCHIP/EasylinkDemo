@@ -65,7 +65,12 @@
         [wlanConfig setObject:passwordField.text forKey:KEY_PASSWORD];
         [wlanConfig setObject:[NSNumber numberWithBool:YES] forKey:KEY_DHCP];
         
-        [easylink_config prepareEasyLink_withFTC:wlanConfig info:nil mode:EASYLINK_V2_PLUS];
+        NSLog(@"key:");
+        
+        [easylink_config prepareEasyLink_withFTC:wlanConfig
+                                            info:nil
+                                            mode:EASYLINK_V2_PLUS
+                                         encrypt:[encryptKeyField.text dataUsingEncoding:NSUTF8StringEncoding] ];
         [easylink_config transmitSettings];
         
         ConsoleLog(@"Sending ssid: %@, password: %@", ssidField.text, passwordField.text);

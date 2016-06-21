@@ -15,7 +15,7 @@
     Reachability *wifiReachability;
     NSData *_ssidData;
     EASYLINK *easylink_config;
-    IBOutlet UITextField *ssidField, *passwordField, *infoField;
+    IBOutlet UITextField *ssidField, *passwordField, *infoField, *encryptKeyField;
     IBOutlet UIButton *easylinkButton;
 }
 
