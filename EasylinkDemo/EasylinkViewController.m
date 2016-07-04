@@ -65,8 +65,6 @@
         [wlanConfig setObject:passwordField.text forKey:KEY_PASSWORD];
         [wlanConfig setObject:[NSNumber numberWithBool:YES] forKey:KEY_DHCP];
         
-        NSLog(@"key:");
-        
         [easylink_config prepareEasyLink_withFTC:wlanConfig
                                             info:nil
                                             mode:EASYLINK_V2_PLUS
