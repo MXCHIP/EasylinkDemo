@@ -44,7 +44,7 @@ typedef enum{
 #define MessageCount 100
 
 @protocol EasyLinkFTCDelegate
-@required
+@optional
 /**
  @brief A new FTC client is found by FTC server in EasyLink
  @param client:         Client identifier.
@@ -72,7 +72,7 @@ typedef enum{
  */
 - (void)onDisconnectFromFTC:(NSNumber *)client  withError:(bool)err;
 
-@optional
+
 /**
  @brief EasyLink stage is changed during soft ap configuration mode
  @param stage:         The current stage.
