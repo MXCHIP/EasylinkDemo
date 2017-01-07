@@ -392,11 +392,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wei xu (827P7DZFL8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -441,11 +441,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wei xu (827P7DZFL8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -458,6 +458,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				"OTHER_CFLAGS[arch=*]" = "-fembed-bitcode";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -472,12 +473,21 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: wei xu (827P7DZFL8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wei xu (827P7DZFL8)";
 				DEVELOPMENT_TEAM = AYDR2YFZ4K;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/EasylinkDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EasylinkDemo/EasyLink",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+					"-fembed-bitcode",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mxchip.EasyLinkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -494,12 +504,21 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: wei xu (827P7DZFL8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wei xu (827P7DZFL8)";
 				DEVELOPMENT_TEAM = AYDR2YFZ4K;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/EasylinkDemo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EasylinkDemo/EasyLink",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+					"-fembed-bitcode",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mxchip.EasyLinkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
