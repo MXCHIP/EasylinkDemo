@@ -112,14 +112,9 @@
 
 - (void)onFoundByFTC:(NSNumber *)client withConfiguration: (NSDictionary *)configDict
 {
+    [_easylink_config stopTransmitting];
     [self searchForCell:[configDict objectForKey:@"C"]];
     [_easylink_config configFTCClient:client withConfiguration:nil];
-}
-
-
-- (void)onFound:(NSNumber *)client withName:(NSString *)name mataData: (NSDictionary *)mataDataDict
-{
-    [_easylink_config stopTransmitting];
 }
 
 

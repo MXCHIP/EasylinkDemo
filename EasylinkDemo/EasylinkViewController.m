@@ -119,7 +119,7 @@
     NetworkStatus netStatus = [wifiReachability currentReachabilityStatus];
     
     /* iOS has connect to a wireless router */
-    if ( netStatus != NotReachable && ![[EASYLINK ssidForConnectedNetwork] hasPrefix:@"EasyLink_"] && easylink_config.softAPSending == false) {
+    if ( netStatus != NotReachable ) {
         ssidField.text = [EASYLINK ssidForConnectedNetwork];
         _ssidData = [EASYLINK ssidDataForConnectedNetwork];
     }else{
@@ -131,7 +131,7 @@
     NetworkStatus netStatus = [wifiReachability currentReachabilityStatus];
     
     /* iOS has connect to a wireless router */
-    if ( netStatus != NotReachable && ![[EASYLINK ssidForConnectedNetwork] hasPrefix:@"EasyLink_"] && easylink_config.softAPSending == false) {
+    if ( netStatus != NotReachable ) {
         ssidField.text = [EASYLINK ssidForConnectedNetwork];
         _ssidData = [EASYLINK ssidDataForConnectedNetwork];
     }else{
