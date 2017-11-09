@@ -67,7 +67,7 @@
         
         [easylink_config prepareEasyLink:wlanConfig
                                             info:nil
-                                            mode:EASYLINK_V2_PLUS
+                                            mode:EASYLINK_AWS
                                          encrypt:[encryptKeyField.text dataUsingEncoding:NSUTF8StringEncoding] ];
         [easylink_config transmitSettings];
         

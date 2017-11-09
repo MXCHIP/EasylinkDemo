@@ -19,6 +19,7 @@ typedef enum{
     EASYLINK_V2,
     EASYLINK_PLUS,
     EASYLINK_V2_PLUS,
+    EASYLINK_AWS,
     EASYLINK_SOFT_AP,
 } EasyLinkMode;
 
@@ -41,10 +42,12 @@ typedef enum{
 #define KEY_DNS2          @"DNS2"               //value type: NSString, required if DHCP is false
 
 #define FTC_PORT 8000
+#define AWS_ECHO_SERVER_PORT 65123
+#define AWS_ECHO_CLIENT_PORT 65126
 #define MessageCount 100
 
 @protocol EasyLinkFTCDelegate
-@optional
+@required
 /**
  @brief A new FTC client is found by FTC server in EasyLink
  @param client:         Client identifier.
@@ -72,7 +75,7 @@ typedef enum{
  */
 - (void)onDisconnectFromFTC:(NSNumber *)client  withError:(bool)err;
 
-
+@optional
 /**
  @brief EasyLink stage is changed during soft ap configuration mode
  @param stage:         The current stage.
@@ -88,14 +91,18 @@ typedef enum{
 NSNetServiceDelegate>{
 @private
     /* Wlan configuratuon send by EasyLink */
-    NSUInteger _broadcastcount, _multicastCount;
-    bool _broadcastSending, _multicastSending, _softAPSending, _wlanUnConfigured;
+    NSUInteger _broadcastCount, _multicastCount, _awsCount;
+    bool _broadcastSending, _multicastSending, _awsSending, _softAPSending, _wlanUnConfigured;
     
     
     EasyLinkMode _mode;
     
-    NSMutableArray *multicastArray, *broadcastArray;   //Used for EasyLink transmitting
-    ELAsyncUdpSocket *multicastSocket, *broadcastSocket;
+    NSMutableArray *multicastArray, *broadcastArray, *awsArray;   //Used for EasyLink transmitting
+    NSArray *multicastGuideArray, *broadcastGuideArray, *awsGuideArray;   //Used for EasyLink transmitting
+    ELAsyncUdpSocket *multicastSocket, *broadcastSocket, *awsSocket;
+    
+    //Used for EasyLink AWS new device discovery
+    ELAsyncUdpSocket *awsEchoServer;
     
     //Used for EasyLink first time configuration
     ELAsyncSocket *ftcServerSocket;
@@ -119,9 +126,10 @@ NSNetServiceDelegate>{
 @property (nonatomic, readonly) EasyLinkMode mode;
 
 /* These delays should can only be write before prepareEasyLink_withFTC:info:mode is called. The less time is delayed, the faster Easylink may success,but wireless router would be under heavier pressure. So user should consider a balence between speed and wireless router's performance*/
-@property (nonatomic, readwrite) float easyLinkPlusDelayPerByte;   //Default value: 5ms
-@property (nonatomic, readwrite) float easyLinkPlusDelayPerBlock;  //Default value: 80ms, a block send 5 package
-@property (nonatomic, readwrite) float easyLinkV2DelayPerBlock;    //Default value: 20ms, a block send 1 package
+@property (nonatomic, readwrite) float easyLinkPlusDelayPerByte;   //Default value: 0.005s
+@property (nonatomic, readwrite) float easyLinkPlusDelayPerBlock;  //Default value: 0.06s, a block send 5 package
+@property (nonatomic, readwrite) float easyLinkV2DelayPerBlock;    //Default value: 0.08s, a block send 1 package
+@property (nonatomic, readwrite) float easyLinkAWSDelayPerByte;    //Default value: 0.02s
 
 /* Enable debug log when EasyLink lib is running, disabled in default */
 @property (nonatomic, readwrite) BOOL enableDebug;
@@ -385,19 +393,19 @@ NSNetServiceDelegate>{
 
 /**
  @brief Transmit wlan configurations to MiCO device, and start to find new connected device
-        using bonjour protocol. EasyLink will send a random number to MiCO device,
-        that make MiCO devices have an unique idenfifier in every configuration procedure.
-        So even config a same device, two configuration make it different. EasyLink generate
-        callback - (void)onFound: withName: mataData: after find a new device. After that
-        EasyLink will try to connect to MiCO device this http protocol, and fetch configurations
-        on the MiCO device. If you enable local config server on the device, a callback will
-        be generate: - (void)onFoundByFTC: withConfiguration:.
+ using bonjour protocol. EasyLink will send a random number to MiCO device,
+ that make MiCO devices have an unique idenfifier in every configuration procedure.
+ So even config a same device, two configuration make it different. EasyLink generate
+ callback - (void)onFound: withName: mataData: after find a new device. After that
+ EasyLink will try to connect to MiCO device this http protocol, and fetch configurations
+ on the MiCO device. If you enable local config server on the device, a callback will
+ be generate: - (void)onFoundByFTC: withConfiguration:.
  
-        通过EasyLink功能将无线网络参数发送到MiCO设备，同时EasyLink将启动bonjour协议查找新连接的MiCO设备。
-        每一次调用都会产生一个随机码发送给MiCO设备，使得每一次配网成功的设备都有不同的编号，防止同一个设备在
-        不同的配置过程中被发现。当发现新设备后，产生回调：- (void)onFound: withName: mataData:
-        的同时EasyLink库会按HTTP协议尝试连接到新设备，如果MiCO设备上开启了本地配置服务，就会连接成功，产生回调：
-        - (void)onFoundByFTC: withConfiguration:
+ 通过EasyLink功能将无线网络参数发送到MiCO设备，同时EasyLink将启动bonjour协议查找新连接的MiCO设备。
+ 每一次调用都会产生一个随机码发送给MiCO设备，使得每一次配网成功的设备都有不同的编号，防止同一个设备在
+ 不同的配置过程中被发现。当发现新设备后，产生回调：- (void)onFound: withName: mataData:
+ 的同时EasyLink库会按HTTP协议尝试连接到新设备，如果MiCO设备上开启了本地配置服务，就会连接成功，产生回调：
+ - (void)onFoundByFTC: withConfiguration:
  @note  Should be excuted before (void)transmitSettings.
  @note  Compatiable with all MiCO after 2.3.0. 设备运行的MiCO版本需要高于2.3.0
  @param wlanConfigDict: Wlan configurations, include SSID, password, address etc. refer to #define KEY_XXX
@@ -412,20 +420,20 @@ NSNetServiceDelegate>{
 
 /**
  @brief This API contain all functions in - (void)prepareEasyLink:info:mode:, but it deliver
-        iOS device's IP address rather than a random number. Device running MiCO lower than
-        2.3.0 will connect to this address and send its configurations, EasyLink will generate
-        - (void)onFoundByFTC: withConfiguration: directly without call
-        - (void)onFound: withName: mataData:, because this new dvice is not found by bonjour.
-        When config a MiCO device newer than 2.3.0, and config one device twice in less than
-        1 miniute, Easylink wll generate wrong callback  - (void)onFound: withName: mataData:
-        That is because EasyLink cannot find any difference on the same device in different 
-        configuration procedures.
+ iOS device's IP address rather than a random number. Device running MiCO lower than
+ 2.3.0 will connect to this address and send its configurations, EasyLink will generate
+ - (void)onFoundByFTC: withConfiguration: directly without call
+ - (void)onFound: withName: mataData:, because this new dvice is not found by bonjour.
+ When config a MiCO device newer than 2.3.0, and config one device twice in less than
+ 1 miniute, Easylink wll generate wrong callback  - (void)onFound: withName: mataData:
+ That is because EasyLink cannot find any difference on the same device in different
+ configuration procedures.
  
-        该API包含- (void)prepareEasyLink:info:mode: 中的所有功能，但是传输的不是随机编码而是iOS设备的地址，
-        在低于2.3.0版本的MiCO中，设备会按照这个地址连接到iOS设备并且直接产生回调：- (void)onFoundByFTC: withConfiguration:
-        而不产生通过bonjour协议产生的回调：- (void)onFound: withName: mataData:
-        由于不传输随机数，EasyLink无法区分同一个设备在不同的配置下有任何不同，因此，使得在对版本高于2.3.0的MiCO
-        设备进行配置时，如果对同一个设备两次配置的时间少于1分钟，会产生针对前一次配置的错误回调
+ 该API包含- (void)prepareEasyLink:info:mode: 中的所有功能，但是传输的不是随机编码而是iOS设备的地址，
+ 在低于2.3.0版本的MiCO中，设备会按照这个地址连接到iOS设备并且直接产生回调：- (void)onFoundByFTC: withConfiguration:
+ 而不产生通过bonjour协议产生的回调：- (void)onFound: withName: mataData:
+ 由于不传输随机数，EasyLink无法区分同一个设备在不同的配置下有任何不同，因此，使得在对版本高于2.3.0的MiCO
+ 设备进行配置时，如果对同一个设备两次配置的时间少于1分钟，会产生针对前一次配置的错误回调
  
  @note  Should be excuted before (void)transmitSettings.
  @note  Compatiable with all MiCO versions. 兼容所有MiCO版本
@@ -457,7 +465,7 @@ NSNetServiceDelegate>{
  Once the device has received, it will disconnect, and exit the EasyLionk configuration mode.
  This function initialize the device like cloud servive account, password, working configures
  etc. when user first connect the device to Internet.
- @note  This function can only be called a new device is called by 
+ @note  This function can only be called a new device is called by
  - (void)onFoundByFTC:(NSNumber *) withConfiguration: (NSDictionary *)
  @param client:         Client identifier, read by onFoundByFTC:currentConfig: in protocol
  EasyLinkFTCDelegate.
