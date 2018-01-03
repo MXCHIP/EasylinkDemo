@@ -86,6 +86,7 @@
 {
     /*Config is success*/
     ConsoleLog(@"Found by mDNS, client:%d, config success!", [client intValue]);
+    ConsoleLog(@"mataDataDict = %@", [mataDataDict description]);
     [easylink_config stopTransmitting];
     [easylinkButton setSelected:NO];
 }
