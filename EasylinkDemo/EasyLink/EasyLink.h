@@ -21,6 +21,7 @@ typedef enum{
     EASYLINK_V2_PLUS,
     EASYLINK_AWS,
     EASYLINK_SOFT_AP,
+    EASYLINK_MODE_MAX,
 } EasyLinkMode;
 
 typedef enum{
@@ -91,9 +92,11 @@ typedef enum{
 NSNetServiceDelegate>{
 @private
     /* Wlan configuratuon send by EasyLink */
+    NSObject *lockToken;
     NSUInteger _broadcastCount, _multicastCount, _awsCount;
     bool _broadcastSending, _multicastSending, _awsSending, _softAPSending, _wlanUnConfigured;
     
+    NSString *_userInfo_str;
     
     EasyLinkMode _mode;
     
@@ -103,6 +106,7 @@ NSNetServiceDelegate>{
     
     //Used for EasyLink AWS new device discovery
     ELAsyncUdpSocket *awsEchoServer;
+    NSMutableArray *awsHostsArrayPerSearch;
     
     //Used for EasyLink first time configuration
     ELAsyncSocket *ftcServerSocket;
