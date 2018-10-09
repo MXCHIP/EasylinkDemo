@@ -19,7 +19,7 @@
 		3DD4B5FE1BBA74E900CE20F0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD4B5FD1BBA74E900CE20F0 /* RootViewController.m */; };
 		3DEB952F1BF3383E0005C635 /* MXCHIPAirlink.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB952E1BF3383E0005C635 /* MXCHIPAirlink.m */; };
 		3DEB95321BF347EF0005C635 /* GizwitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEB95311BF347EF0005C635 /* GizwitsViewController.m */; };
-		B5B7DD1B9DC5EAEE8D853F75 /* libPods-EasylinkDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF4F4B97587CFE133CC74B3 /* libPods-EasylinkDemo.a */; };
+		BF8FD931F1EF7A8E765A9076 /* libPods-EasylinkDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE65D5B1C7183F615359A84 /* libPods-EasylinkDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1146D7FD9E809361EE929C7D /* Pods-EasylinkDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasylinkDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasylinkDemo/Pods-EasylinkDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		2CF4F4B97587CFE133CC74B3 /* libPods-EasylinkDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasylinkDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CE65D5B1C7183F615359A84 /* libPods-EasylinkDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasylinkDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D611A891BC4A58C00DC1F4B /* AXZWifiLinkProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AXZWifiLinkProtocol.h; path = EasylinkDemo/EasyLink/AXZWifiLinkProtocol.h; sourceTree = SOURCE_ROOT; };
 		3D769FF11BB932D700F26005 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = EasylinkDemo/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		3D769FF21BB932D700F26005 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = EasylinkDemo/AppDelegate.m; sourceTree = SOURCE_ROOT; };
@@ -60,7 +59,8 @@
 		3DEB95311BF347EF0005C635 /* GizwitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GizwitsViewController.m; path = EasylinkDemo/GizwitsViewController.m; sourceTree = SOURCE_ROOT; };
 		3DFED6761AFCCFC50089FC07 /* EasylinkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasylinkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DFED68F1AFCCFC50089FC07 /* EasyLinkDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyLinkDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF7BD3516F9073DEE190B106 /* Pods-EasylinkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasylinkDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasylinkDemo/Pods-EasylinkDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8198E7ABAAE90B75C83469DC /* Pods-EasylinkDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasylinkDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasylinkDemo/Pods-EasylinkDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		A525A55694B4CD825D580C8C /* Pods-EasylinkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasylinkDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasylinkDemo/Pods-EasylinkDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5B7DD1B9DC5EAEE8D853F75 /* libPods-EasylinkDemo.a in Frameworks */,
 				3DB9C75D1CF5ACE100576DA2 /* libEasyLink.a in Frameworks */,
+				BF8FD931F1EF7A8E765A9076 /* libPods-EasylinkDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		348E8AC244EA7B29A93D9CC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CE65D5B1C7183F615359A84 /* libPods-EasylinkDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3DFED66D1AFCCFC50089FC07 = {
 			isa = PBXGroup;
 			children = (
@@ -92,8 +100,8 @@
 				3DFED6781AFCCFC50089FC07 /* Easylink Demo */,
 				3DFED6921AFCCFC50089FC07 /* Easylink DemoTests */,
 				3DFED6771AFCCFC50089FC07 /* Products */,
-				59141DCA7C15A3E55A620AFA /* Pods */,
-				C5F2D44327F8840A6E9AA6A4 /* Frameworks */,
+				71D4D91ECC0EA49BE7764998 /* Pods */,
+				348E8AC244EA7B29A93D9CC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,21 +175,13 @@
 			path = EasyLink/EasyLink/Common;
 			sourceTree = "<group>";
 		};
-		59141DCA7C15A3E55A620AFA /* Pods */ = {
+		71D4D91ECC0EA49BE7764998 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1146D7FD9E809361EE929C7D /* Pods-EasylinkDemo.debug.xcconfig */,
-				BF7BD3516F9073DEE190B106 /* Pods-EasylinkDemo.release.xcconfig */,
+				8198E7ABAAE90B75C83469DC /* Pods-EasylinkDemo.debug.xcconfig */,
+				A525A55694B4CD825D580C8C /* Pods-EasylinkDemo.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		C5F2D44327F8840A6E9AA6A4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2CF4F4B97587CFE133CC74B3 /* libPods-EasylinkDemo.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,11 +191,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DFED6991AFCCFC50089FC07 /* Build configuration list for PBXNativeTarget "EasylinkDemo" */;
 			buildPhases = (
-				8B5D6270FA7C10CA450C68C3 /* Check Pods Manifest.lock */,
+				86DC174CE118E3984087A2F2 /* [CP] Check Pods Manifest.lock */,
 				3DFED6721AFCCFC50089FC07 /* Sources */,
 				3DFED6731AFCCFC50089FC07 /* Frameworks */,
 				3DFED6741AFCCFC50089FC07 /* Resources */,
-				B220E03F42C4EDC541ED7DD4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,6 +236,9 @@
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = AYDR2YFZ4K;
 						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 1;
+							};
 							com.apple.HomeKit = {
 								enabled = 0;
 							};
@@ -288,34 +290,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8B5D6270FA7C10CA450C68C3 /* Check Pods Manifest.lock */ = {
+		86DC174CE118E3984087A2F2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasylinkDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		B220E03F42C4EDC541ED7DD4 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasylinkDemo/Pods-EasylinkDemo-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -467,9 +457,10 @@
 		};
 		3DFED69A1AFCCFC50089FC07 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1146D7FD9E809361EE929C7D /* Pods-EasylinkDemo.debug.xcconfig */;
+			baseConfigurationReference = 8198E7ABAAE90B75C83469DC /* Pods-EasylinkDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasylinkDemo/EasylinkDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: wei xu (827P7DZFL8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wei xu (827P7DZFL8)";
 				DEVELOPMENT_TEAM = AYDR2YFZ4K;
@@ -492,15 +483,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mxchip.EasyLinkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "299028d3-19c8-4f2f-a4cd-31e125c6601f";
-				PROVISIONING_PROFILE_SPECIFIER = "MXCHIP COMMON APP";
+				PROVISIONING_PROFILE_SPECIFIER = EasyLinkDemo;
 			};
 			name = Debug;
 		};
 		3DFED69B1AFCCFC50089FC07 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF7BD3516F9073DEE190B106 /* Pods-EasylinkDemo.release.xcconfig */;
+			baseConfigurationReference = A525A55694B4CD825D580C8C /* Pods-EasylinkDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasylinkDemo/EasylinkDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: wei xu (827P7DZFL8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wei xu (827P7DZFL8)";
 				DEVELOPMENT_TEAM = AYDR2YFZ4K;
@@ -523,7 +515,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mxchip.EasyLinkDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "299028d3-19c8-4f2f-a4cd-31e125c6601f";
-				PROVISIONING_PROFILE_SPECIFIER = "MXCHIP COMMON APP";
+				PROVISIONING_PROFILE_SPECIFIER = EasyLinkDemo;
 			};
 			name = Release;
 		};
